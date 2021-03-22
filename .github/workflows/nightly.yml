@@ -40,11 +40,9 @@ jobs:
       - name: test
         run: ls
 
-
   deploy:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    on:
-      branch: master
     steps:
 
       - name: Deploy to GitHub Pages
