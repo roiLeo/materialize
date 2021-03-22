@@ -43,9 +43,8 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    branches:
-      only:
-        - master
+    on:
+      branch: master
     steps:
 
       - name: Deploy to GitHub Pages
